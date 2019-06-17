@@ -28,10 +28,18 @@ class Numberdrome {
     }, 1);
   }
   min() {
-    return Math.min(...this.numbersList);
+    if(this.numbersList.length) {
+      return Math.min(...this.numbersList);
+    } else {
+      throw new Error('Empty list');
+    }
   }
   max() {
-    return Math.max(...this.numbersList);
+    if(this.numbersList.length) {
+      return Math.max(...this.numbersList);
+    } else {
+      throw new Error('Empty list');
+    }
   }
 }
 
